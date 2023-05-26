@@ -5,6 +5,8 @@ import './index.css'
 
 class LoginForm extends Component {
   state = {userId: '', pin: '', showErrorMsg: false, errorMsg: ''}
+  
+  
 
   onSubmitLogin = async event => {
     event.preventDefault()
@@ -46,6 +48,10 @@ class LoginForm extends Component {
 
   render() {
     const {showErrorMsg, errorMsg} = this.state
+     const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="app-container">
         <div className="sub-container">
@@ -76,7 +82,7 @@ class LoginForm extends Component {
 
               <input
                 type="password"
-                htmlFor="password"
+                id="password"
                 placeholder="Enter PIN"
                 className="input-ele"
                 onChange={this.onChangePIN}
