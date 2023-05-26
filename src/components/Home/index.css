@@ -1,0 +1,48 @@
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #152850;
+  padding: 20px;
+}
+
+.nav-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  width: 70px;
+  margin-left: 4px;
+}
+
+.logout-btn {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 5px;
+  margin-right: 4px;
+}
+
+.content-cont {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+}
+
+.heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.digital-card-img {
+  width: 90%;
+  height: 60%;
+  margin-top: 5px;
+}
